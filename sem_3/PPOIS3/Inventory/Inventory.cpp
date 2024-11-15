@@ -34,6 +34,5 @@ string Inventory::InventoryInfo(const Date& current_date) const
     string info = "Inventory " + date_of_inventory.getDayMonthYear() + "\n";
     info += "Expected Number of Goods: " + to_string(expected_number_of_goods) + "\n";
     info += "Actual Number of Goods: " + to_string(statistic_for_inventory.getProductionSize()) + "\n";
-    /*info += "Inventory Recent Check: " + string(isInventoryRecent(current_date) ? "Recent" : "Outdated") + "\n";*/
     return info;
 }
