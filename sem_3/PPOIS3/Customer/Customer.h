@@ -13,11 +13,11 @@ class Customer
 {
 private:
 	string customer;
-	ContactInfo contInf_of_customer;
+	Contact_Info contInf_of_customer;
 	vector <Product> list_of_required_goods;
 public:
 	Customer();
-	Customer(const string& customer_name, const ContactInfo& contact, const vector<Product>& required_goods);
+	Customer(const string& customer_name, const Contact_Info& contact, const vector<Product>& required_goods);
 
 	void CustomerInfo() const;
 };
