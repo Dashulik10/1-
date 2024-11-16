@@ -14,10 +14,10 @@ protected:
 	string name;
 	string surname;
 	string sex;
-	ContactInfo inf_person;
+	Contact_Info inf_person;
 public:
 	Person();
-	Person(string name, string surname, string sex, ContactInfo inf_person);
+	Person(string name, string surname, string sex, Contact_Info inf_person);
 
 	string getClientGender();
 	bool CorrectnessContactInf();
