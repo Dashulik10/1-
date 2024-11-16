@@ -6,7 +6,7 @@
 using namespace std;
 
 Person::Person() : name(""), surname(""), sex(""), inf_person() {}
-Person::Person(string n, string s, string g, ContactInfo info)
+Person::Person(string n, string s, string g, Contact_Info info)
     : name(n), surname(s), sex(g), inf_person(info) {}
 
 string Person::getClientGender()
