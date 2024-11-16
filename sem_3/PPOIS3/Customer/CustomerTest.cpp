@@ -19,7 +19,7 @@ TEST(CustomerTest, DefaultConstructor)
 
 TEST(CustomerTest, ParameterizedConstructorEmptyName) 
 {
-    ContactInfo contact("123-456-7890", "customer@example.com");
+    Contact_Info contact("123-456-7890", "customer@example.com");
     Date receiptDate(1, 6, 2023);
     Date expirationDate(1, 6, 2024);
     Climate_Placement climate("Cold Storage", 5.0, 40);
@@ -34,7 +34,7 @@ TEST(CustomerTest, ParameterizedConstructorEmptyName)
 
 TEST(CustomerTest, ParameterizedConstructorEmptyProductList) 
 {
-    ContactInfo contact("123-456-7890", "customer@example.com");
+    Contact_Info contact("123-456-7890", "customer@example.com");
 
     EXPECT_THROW(Customer customer("John Doe", contact, {}), invalid_argument);  
 }
