@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include "Customer.h"
-#include "ContactInfo.h"
+#include "Contact_Info.h"
 #include "Product.h"
 #include "Date.h"
 #include "Climate_Placement.h"
