@@ -7,15 +7,15 @@
 #include <regex>
 using namespace std;
 
-class ContactInfo
+class Contact_Info
 {
 private:
 	string telephone_number;
 	string email;
 public:
 
-	ContactInfo();
-	ContactInfo(string telephone_number, string email);
+	Contact_Info();
+	Contact_Info(string telephone_number, string email);
 
 	bool phoneInputCheck();
 	bool emailInputCheck();
