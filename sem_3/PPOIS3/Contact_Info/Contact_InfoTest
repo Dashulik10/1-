@@ -1,83 +1,83 @@
 #include <gtest/gtest.h>
 #include "Contact_Info.h"
 
-TEST(ContactInfoTest, DefaultConstructor) 
+TEST(Contact_InfoTest, DefaultConstructor) 
 {
-    ContactInfo contact;
+    Contact_Info contact;
     EXPECT_EQ(contact.getTelephoneNumber(), "");
     EXPECT_EQ(contact.getEmail(), "");
 }
-TEST(ContactInfoTest, Constructor)
+TEST(Contact_InfoTest, Constructor)
 {
-    ContactInfo contact("+1234567890123", "test@example.com");
+    Contact_Info contact("+1234567890123", "test@example.com");
     EXPECT_EQ(contact.getTelephoneNumber(), "+1234567890123");
     EXPECT_EQ(contact.getEmail(), "test@example.com");
 }
 
 
-TEST(ContactInfoTest, PhoneInputCheck) 
+TEST(Contact_InfoTest, PhoneInputCheck) 
 {
-    ContactInfo contact("+123459", "test@example.com");
+    Contact_Info contact("+123459", "test@example.com");
     EXPECT_TRUE(contact.phoneInputCheck());
 }
-TEST(ContactInfoTest, PhoneInputCheckInvalid) 
+TEST(Contact_InfoTest, PhoneInputCheckInvalid) 
 {
-    ContactInfo contact("+1234567890124345493", "test@example.com");
+    Contact_Info contact("+1234567890124345493", "test@example.com");
     EXPECT_FALSE(contact.phoneInputCheck());
 
-    ContactInfo contact2("+123455069890589389", "test@example.com");
+    Contact_Info contact2("+123455069890589389", "test@example.com");
     EXPECT_FALSE(contact2.phoneInputCheck());
 }
 
-TEST(ContactInfoTest, EmailInputCheck) 
+TEST(Contact_InfoTest, EmailInputCheck) 
 {
-    ContactInfo contact("+1234567890123", "valid_email@example.com");
+    Contact_Info contact("+1234567890123", "valid_email@example.com");
     EXPECT_TRUE(contact.emailInputCheck());
 
-    ContactInfo contact2("+1234567890123", "name.lastname@example.co.uk");
+    Contact_Info contact2("+1234567890123", "name.lastname@example.co.uk");
     EXPECT_TRUE(contact2.emailInputCheck());
 }
-TEST(ContactInfoTest, EmailInputCheckInvalid)
+TEST(Contact_InfoTest, EmailInputCheckInvalid)
 {
-    ContactInfo contact("+1234567890123", "invalid_email@.com");
+    Contact_Info contact("+1234567890123", "invalid_email@.com");
     EXPECT_FALSE(contact.emailInputCheck());
 
-    ContactInfo contact2("+1234567890123", "invalid_email.com"); 
+    Contact_Info contact2("+1234567890123", "invalid_email.com"); 
     EXPECT_FALSE(contact2.emailInputCheck());
 
-    ContactInfo contact3("+1234567890123", "invalid@domain");
+    Contact_Info contact3("+1234567890123", "invalid@domain");
     EXPECT_FALSE(contact3.emailInputCheck());
 }
 
-TEST(ContactInfoTest, IsContactInfoComplete)
+TEST(Contact_InfoTest, IsContactInfoComplete)
 {
-    ContactInfo contact("+1234567890123", "test@example.com");
+    Contact_Info contact("+1234567890123", "test@example.com");
     EXPECT_TRUE(contact.isContactInfCompl());
 
-    ContactInfo contact2("+1234567890123", "");
+    Contact_Info contact2("+1234567890123", "");
     EXPECT_FALSE(contact2.isContactInfCompl());
 
-    ContactInfo contact3("", "test@example.com"); 
+    Contact_Info contact3("", "test@example.com"); 
     EXPECT_FALSE(contact3.isContactInfCompl());
 }
 
-TEST(ContactInfoTest, GetTelephoneNumber) 
+TEST(Contact_InfoTest, GetTelephoneNumber) 
 {
-    ContactInfo contact("+1234567890123", "test@example.com");
+    Contact_Info contact("+1234567890123", "test@example.com");
     EXPECT_EQ(contact.getTelephoneNumber(), "+1234567890123");
 }
-TEST(ContactInfoTest, GetEmail)
+TEST(Contact_InfoTest, GetEmail)
 {
-    ContactInfo contact("+1234567890123", "test@example.com");
+    Contact_Info contact("+1234567890123", "test@example.com");
     EXPECT_EQ(contact.getEmail(), "test@example.com");
 }
-TEST(ContactInfoTest, SetTelephoneNumber)
+TEST(Contact_InfoTest, SetTelephoneNumber)
 {
     ContactInfo contact;
     contact.setTelephoneNumber("+1234567890123");
     EXPECT_EQ(contact.getTelephoneNumber(), "+1234567890123");
 }
-TEST(ContactInfoTest, SetEmail)
+TEST(Contact_InfoTest, SetEmail)
 {
     ContactInfo contact;
     contact.setEmail("test@example.com");
