@@ -16,7 +16,7 @@ private:
 	double rating_of_emploee;
 public:
 	Emploee();
-	Emploee(string name, string surname, string sex, ContactInfo inf_person, string post, double rating_of_emploee);
+	Emploee(string name, string surname, string sex, Contact_Info inf_person, string post, double rating_of_emploee);
 
 	string getPostInfo();
 	bool checkingAccessToConfidentialDocs();
