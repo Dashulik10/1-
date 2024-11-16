@@ -6,18 +6,18 @@
 #include <regex>
 using namespace std;
 
-ContactInfo::ContactInfo() : telephone_number(""), email("") {}
-ContactInfo::ContactInfo(string tel, string em)
+Contact_Info::Contact_Info() : telephone_number(""), email("") {}
+Contact_Info::Contact_Info(string tel, string em)
     : telephone_number(tel), email(em) {}
 
-bool ContactInfo::emailInputCheck()
+bool Contact_Info::emailInputCheck()
 {
     const regex pattern("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
     return regex_match(email, pattern);
 }
-bool ContactInfo::phoneInputCheck() { return (telephone_number[0] == '+' && telephone_number.length() <= 13); }
-bool ContactInfo::isContactInfCompl() { return (!telephone_number.empty() && !email.empty()); }
-string ContactInfo::getTelephoneNumber() const { return telephone_number; }
-string ContactInfo::getEmail() const { return email; }
-int ContactInfo::setTelephoneNumber(const string& tel) { telephone_number = tel; return 0; }
-int ContactInfo::setEmail(const string& em) { email = em; return 0; }
+bool Contact_Info::phoneInputCheck() { return (telephone_number[0] == '+' && telephone_number.length() <= 13); }
+bool Contact_Info::isContactInfCompl() { return (!telephone_number.empty() && !email.empty()); }
+string Contact_Info::getTelephoneNumber() const { return telephone_number; }
+string Contact_Info::getEmail() const { return email; }
+int Contact_Info::setTelephoneNumber(const string& tel) { telephone_number = tel; return 0; }
+int Contact_Info::setEmail(const string& em) { email = em; return 0; }
