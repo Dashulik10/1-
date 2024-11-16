@@ -17,7 +17,7 @@ TEST(SupplierTest, DefaultConstructor)
 
 TEST(SupplierTest, ConstructorInput) 
 {
-    ContactInfo contact("+1234567890123", "test@supplier.com");
+    Contact_Info contact("+1234567890123", "test@supplier.com");
     Supplier supplier("ABC Corp", contact, "Electronics", 9.0);
 
     EXPECT_EQ(supplier.getNameOfSupplier(), "ABC Corp");
@@ -28,17 +28,17 @@ TEST(SupplierTest, ConstructorInput)
 }
 TEST(SupplierTest, ConstructorInvalidName) 
 {
-    ContactInfo contact("+1234567890123", "test@supplier.com");
+    Contact_Info contact("+1234567890123", "test@supplier.com");
     EXPECT_THROW(Supplier("", contact, "Electronics", 9.0), std::invalid_argument);
 }
 TEST(SupplierTest, ConstructorInvalidCategory)
 {
-    ContactInfo contact("+1234567890123", "test@supplier.com");
+    Contact_Info contact("+1234567890123", "test@supplier.com");
     EXPECT_THROW(Supplier("ABC Corp", contact, "", 9.0), std::invalid_argument);
 }
 TEST(SupplierTest, ConstructorInvalidRating)
 {
-    ContactInfo contact("+1234567890123", "test@supplier.com");
+    Contact_Info contact("+1234567890123", "test@supplier.com");
     EXPECT_THROW(Supplier("ABC Corp", contact, "Electronics", 11.0), std::invalid_argument);  
     EXPECT_THROW(Supplier("ABC Corp", contact, "Electronics", -1.0), std::invalid_argument); 
 }
@@ -46,7 +46,7 @@ TEST(SupplierTest, ConstructorInvalidRating)
 
 TEST(SupplierTest, SupplierRatingInfo)
 {
-    ContactInfo contact("+1234567890123", "test@supplier.com");
+    Contact_Info contact("+1234567890123", "test@supplier.com");
 
     Supplier excellentSupplier("Excellent Supplier", contact, "Electronics", 9.0);
     EXPECT_EQ(excellentSupplier.SupplierRatingInfo(), "Excellent supplier with high reliability!");
@@ -61,7 +61,7 @@ TEST(SupplierTest, SupplierRatingInfo)
 
 TEST(SupplierTest, Getters) 
 {
-    ContactInfo contact("+1234567890123", "test@supplier.com");
+    Contact_Info contact("+1234567890123", "test@supplier.com");
     Supplier supplier("XYZ Ltd", contact, "Clothing", 7.5);
 
     EXPECT_EQ(supplier.getNameOfSupplier(), "XYZ Ltd");
