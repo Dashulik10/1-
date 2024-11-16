@@ -7,8 +7,8 @@
 #include <regex>
 using namespace std;
 
-Supplier::Supplier() : name_of_supplier("Unknown"), contInf_of_supplier(ContactInfo()), category_of_goods("General"), rating_of_supplier(0.0) {}
-Supplier::Supplier(const string& name, const ContactInfo& contact, const string& category, double rating)
+Supplier::Supplier() : name_of_supplier("Unknown"), contInf_of_supplier(Contact_Info()), category_of_goods("General"), rating_of_supplier(0.0) {}
+Supplier::Supplier(const string& name, const Contact_Info& contact, const string& category, double rating)
     : name_of_supplier(name), contInf_of_supplier(contact), category_of_goods(category), rating_of_supplier(rating)
 {
     if (name.empty())
@@ -41,7 +41,7 @@ string Supplier::SupplierRatingInfo() const
     }
 }
 string Supplier::getNameOfSupplier() const { return name_of_supplier; }
-ContactInfo Supplier::getContactInfo() const { return contInf_of_supplier; }
+Contact_Info Supplier::getContactInfo() const { return contInf_of_supplier; }
 string Supplier::getCategoryOfGoods() const { return category_of_goods; }
 double Supplier::getRatingOfSupplier() const { return rating_of_supplier; }
 
