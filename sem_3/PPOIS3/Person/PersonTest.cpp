@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include "Person.h"
-#include "ContactInfo.h"
+#include "Contact_Info.h"
 
 TEST(PersonTest, DefaultConstructor) 
 {
