@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include "Supplier.h"
-#include "ContactInfo.h"
+#include "Contact_Info.h"
 
 TEST(SupplierTest, DefaultConstructor) 
 {
