@@ -6,7 +6,7 @@
 using namespace std;
 
 Emploee::Emploee() : Person(), post(""), rating_of_emploee(0.0) {}
-Emploee::Emploee(string n, string s, string g, ContactInfo info, string p, double rating)
+Emploee::Emploee(string n, string s, string g, Contact_Info info, string p, double rating)
     : Person(n, s, g, info), post(p), rating_of_emploee(rating) {}
 
 string Emploee::getPostInfo()
