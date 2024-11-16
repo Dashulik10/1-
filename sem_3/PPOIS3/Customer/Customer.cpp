@@ -8,7 +8,7 @@
 using namespace std;
 
 Customer::Customer() : customer("Unknown") {}
-Customer::Customer(const string& customer_name, const ContactInfo& contact, const vector<Product>& required_goods)
+Customer::Customer(const string& customer_name, const Contact_Info& contact, const vector<Product>& required_goods)
 {
     if (customer_name.empty())
     {
